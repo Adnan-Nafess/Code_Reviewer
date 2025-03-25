@@ -4,7 +4,13 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+    origin: "https://code-reviewer-ifah.vercel.app", 
+    methods: "POST",
+    credentials: true,
+  };
+  
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/ai", aiRoutes);
 
