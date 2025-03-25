@@ -19,7 +19,7 @@ function App() {
     setLoading(true); 
     try {
       const response = await axios.post(
-        "https://code-reviewer-s1ia.vercel.app/ai/get-response",
+        "https://code-reviewer-s1ia.vercel.app/ai/get-response/",
         { code }
       );
       setReview(response.data);
